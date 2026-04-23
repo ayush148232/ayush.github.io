@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal portfolio of a B.Tech CSE student — showcasing skills, projects, and passion for technology." />
+  <title>Ayush — Portfolio</title>
+
+  <!-- Google Fonts: Inter for clean modern typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons CDN (lightweight icon set) -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== SCROLL PROGRESS INDICATOR ========== -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ========== NAVIGATION BAR (fixed) ========== -->
+  <nav class="navbar" id="navbar">
+    <a href="#hero" class="nav-logo">
+      <span class="logo-bracket">&lt;</span>AM<span class="logo-bracket"> /&gt;</span>
+    </a>
+
+    <!-- Desktop nav links -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+
+    <!-- Mobile hamburger button -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="hero">
+    <!-- Animated gradient background canvas -->
+    <canvas id="particleCanvas" class="particle-canvas"></canvas>
+
+    <div class="hero-content">
+      <p class="hero-greeting fade-in">Hello, I'm</p>
+      <h1 class="hero-name fade-in">Ayush</h1>
+      <p class="hero-tagline fade-in">
+        I'm a <span class="typing-text" id="typingText"></span><span class="cursor-blink">|</span>
+      </p>
+      <p class="hero-description fade-in">
+        B.Tech CSE Student passionate about building things for the web.
+      </p>
+      <div class="hero-cta fade-in">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      </div>
+
+      <!-- Scroll-down indicator -->
+      <div class="scroll-indicator fade-in">
+        <div class="mouse">
+          <div class="mouse-wheel"></div>
+        </div>
+        <p>Scroll Down</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title fade-in">
+        <span class="title-number">01.</span> About Me
+      </h2>
+      <div class="about-grid">
+        <div class="about-image fade-in">
+          <div class="image-wrapper">
+            <div class="image-placeholder">
+              <img src="profile.png" alt="Ayush - Profile Photo" class="profile-photo" />
+            </div>
+            <div class="image-border"></div>
+          </div>
+        </div>
+        <div class="about-text fade-in">
+          <p>
+            Hey there! I'm a <strong>B.Tech Computer Science</strong> student who loves turning ideas into reality through code. I started my journey with curiosity about how websites work, and now I'm diving deep into full-stack development.
+          </p>
+          <p>
+            When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or learning about system design and algorithms.
+          </p>
+          <p>
+            I believe in writing <strong>clean, efficient code</strong> and building products that make a difference. Currently seeking internship opportunities where I can learn and contribute.
+          </p>
+          <div class="about-stats">
+            <div class="stat-item glass-card">
+              <span class="stat-number" data-target="2">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-item glass-card">
+              <span class="stat-number" data-target="6">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Technologies</span>
+            </div>
+            <div class="stat-item glass-card">
+              <span class="stat-number" data-target="100">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Commits</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS SECTION ========== -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <h2 class="section-title fade-in">
+        <span class="title-number">02.</span> Skills
+      </h2>
+      <p class="section-subtitle fade-in">Technologies I've been working with</p>
+
+      <div class="skills-grid">
+        <!-- Each skill card with animated progress bar -->
+        <div class="skill-card glass-card fade-in">
+          <div class="skill-header">
+            <span class="skill-name">HTML</span>
+            <span class="skill-percent">85%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" data-width="85"></div>
+          </div>
+        </div>
+
+        <div class="skill-card glass-card fade-in">
+          <div class="skill-header">
+            <span class="skill-name">CSS</span>
+            <span class="skill-percent">80%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" data-width="80"></div>
+          </div>
+        </div>
+
+        <div class="skill-card glass-card fade-in">
+          <div class="skill-header">
+            <span class="skill-name">JavaScript</span>
+            <span class="skill-percent">70%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" data-width="70"></div>
+          </div>
+        </div>
+
+        <div class="skill-card glass-card fade-in">
+          <div class="skill-header">
+            <span class="skill-name">C</span>
+            <span class="skill-percent">72%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" data-width="72"></div>
+          </div>
+        </div>
+
+        <div class="skill-card glass-card fade-in">
+          <div class="skill-header">
+            <span class="skill-name">Python</span>
+            <span class="skill-percent">65%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" data-width="65"></div>
+          </div>
+        </div>
+
+        <div class="skill-card glass-card fade-in">
+          <div class="skill-header">
+            <span class="skill-name">OS & Linux Fundamentals</span>
+            <span class="skill-percent">68%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" data-width="68"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS SECTION ========== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section-title fade-in">
+        <span class="title-number">03.</span> Projects
+      </h2>
+      <p class="section-subtitle fade-in">Some things I've built</p>
+
+      <div class="projects-grid">
+
+        <!-- Project Card 1 -->
+        <div class="project-card glass-card fade-in">
+          <div class="project-image">
+            <div class="project-placeholder gradient-1">
+              <i data-lucide="shopping-cart" class="project-icon"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-link" aria-label="View live demo">
+                <i data-lucide="external-link"></i>
+              </a>
+              <a href="#" class="project-link" aria-label="View source code">
+                <i data-lucide="github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">FreshMart — Grocery Store</h3>
+            <p class="project-desc">A fully responsive grocery e-commerce website with cart functionality, product filtering, and a clean dark-themed UI.</p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="project-card glass-card fade-in">
+          <div class="project-image">
+            <div class="project-placeholder gradient-2">
+              <i data-lucide="cloud-sun" class="project-icon"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-link" aria-label="View live demo">
+                <i data-lucide="external-link"></i>
+              </a>
+              <a href="#" class="project-link" aria-label="View source code">
+                <i data-lucide="github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Weather Dashboard</h3>
+            <p class="project-desc">Real-time weather application that fetches data from OpenWeatherMap API with beautiful animated weather icons.</p>
+            <div class="project-tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">API</span>
+              <span class="tag">CSS</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <h2 class="section-title fade-in">
+        <span class="title-number">04.</span> Get In Touch
+      </h2>
+      <p class="section-subtitle fade-in">
+        I'm currently looking for opportunities. Whether you have a question or just want to say hi, feel free to reach out!
+      </p>
+
+      <div class="contact-content fade-in">
+        <a href="mailto:ayush@example.com" class="btn btn-primary btn-lg contact-email-btn">
+          <i data-lucide="mail"></i> Say Hello
+        </a>
+
+        <div class="social-links">
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-link glass-card" aria-label="GitHub profile">
+            <i data-lucide="github"></i>
+            <span>GitHub</span>
+          </a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-link glass-card" aria-label="LinkedIn profile">
+            <i data-lucide="linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="social-link glass-card" aria-label="Twitter profile">
+            <i data-lucide="twitter"></i>
+            <span>Twitter</span>
+          </a>
+          <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="social-link glass-card" aria-label="Instagram profile">
+            <i data-lucide="instagram"></i>
+            <span>Instagram</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <p>Designed &amp; Built by <strong>Ayush</strong></p>
+    <p class="footer-sub">&copy; 2026 — All rights reserved.</p>
+  </footer>
+
+  <!-- ========== BACK TO TOP BUTTON ========== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i data-lucide="chevron-up"></i>
+  </button>
+
+  <!-- Main script -->
+  <script src="script.js"></script>
+</body>
+</html>
